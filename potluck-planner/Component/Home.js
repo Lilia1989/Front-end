@@ -1,4 +1,10 @@
 import React from 'react'
+import * as yup from 'yup'
+
+const schema = yup.object().shape({
+    username: yup.string().required('username is required').min('username must be at least 2 characters'),
+    password: yup.string().required('password is required').min('password must be at least 6 characters')
+})
  
 export default function Home (props) {
     const { values, login, errors, disabled } = props
@@ -25,7 +31,7 @@ export default function Home (props) {
        </div>
        <div className='container' onSubmit={onSubmit}>
        <div style = {{color: 'red'}}>
-           <div>{errors.name}</div><div>{errors.size}</div>
+           <div>{errors.username}</div><div>{errors.password}</div>
        </div>
        <label>Username
            <input type='text' value={values.username} onChange={onChange} name='name' placeholder='Username' maxLength='50' />
