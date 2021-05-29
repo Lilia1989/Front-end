@@ -31,8 +31,11 @@ export default function Navigation() {
         <Link className="option" to="/">
           HOME
         </Link>
-        <Link className="option" to="/my-Potluck">
+        <Link className="option" to="/Items-List">
           MY Potluck
+        </Link>
+        <Link className="option" to="/Item-Form">
+          OrganizerTable
         </Link>
         <Link className="option" to="/" onClick={() => localStorage.clear()}>
           LogOut
