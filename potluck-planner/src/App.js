@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/sign-up" component={SignupForm} />
           <Route path="/sign-in" component={LogInForm} />
-          <PrivateRoute exact path="/organizer" component={ItemForm} />
+          <PrivateRoute exact path="/item-form" component={ItemForm} />
           <PrivateRoute exact path="/my-Potluck" component={ItemsList} />
           <PrivateRoute exact path="/add_dish/:id" component={ItemCard} />
           <PrivateRoute path="/my-profile" component={UserProfile} />
